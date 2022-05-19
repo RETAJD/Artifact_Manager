@@ -8,23 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-using App.Data;
-
-
 namespace App
 {
-    public partial class Form1 : Form
+    public partial class MainMenu : Form
     {
-        DatabaseContext db = new DatabaseContext();
-        public Form1()
+        public MainMenu()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            dataGridView1.DataSource = db.Userss.ToList();
         }
     }
 }
