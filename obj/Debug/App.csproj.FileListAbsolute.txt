@@ -30,3 +30,12 @@ C:\Users\admin\source\repos\App\bin\Debug\System.Memory.xml
 C:\Users\admin\source\repos\App\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\admin\source\repos\App\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\admin\source\repos\App\obj\Debug\App.MainMenu.resources
+C:\Users\admin\source\repos\App\obj\Debug\App.Zarzadzanie_uzytkownikami.resources
+C:\Users\admin\source\repos\App\obj\Debug\App.Migrations.Roles.resources
+C:\Users\admin\source\repos\App\obj\Debug\App.Migrations.Uprawnienia_table.resources
+C:\Users\admin\source\repos\App\obj\Debug\App.Migrations.delete_Table.resources
+C:\Users\admin\source\repos\App\obj\Debug\App.Migrations.newTable.resources
+C:\Users\admin\source\repos\App\obj\Debug\App.Migrations.onlyRoles_table.resources
+C:\Users\admin\source\repos\App\obj\Debug\App.Migrations.TabelaZpozwoleniami.resources
+C:\Users\admin\source\repos\App\obj\Debug\App.Migrations.zmiana_Roli.resources
+C:\Users\admin\source\repos\App\obj\Debug\App.Migrations.baza.resources

@@ -11,7 +11,7 @@ namespace App.Business_logic
 {
     class Register
     {
-        // Metoda odpowiedzalna za sprawdzenie czy są puste miejsca przy logowaniu
+        // Metoda odpowiedzalna za sprawdzenie bledow przy logowaniu
         public bool czy_zostaly_wprowadzone_dane(string loginn, string hasloo)
         {
             DatabaseContext db = new DatabaseContext();
@@ -26,7 +26,6 @@ namespace App.Business_logic
                     }
                 }
             }
-
             if ((loginn == "" || hasloo == "")){
                 MessageBox.Show("Uzupełnij dokładnie wszystkie pola!");
                 return false;
@@ -39,10 +38,15 @@ namespace App.Business_logic
             return true;
         }
 
+        public string szyfrowanieHasla(string pass)
+        {
+            return BCrypt.Net.BCrypt.HashPassword(pass);
+        }
+
         public void zarejestrujUzytkownika(string loginn, string hasloo)
         {
             // Szyfrowanie Hasła
-            string passwordHash = BCrypt.Net.BCrypt.HashPassword(hasloo);
+            string passwordHash = szyfrowanieHasla(hasloo);
 
             //Sprawdzenie hasła
             //bool verified = BCrypt.Net.BCrypt.Verify("Pa$$w0rd", passwordHash);
@@ -52,8 +56,23 @@ namespace App.Business_logic
             DatabaseContext db = new DatabaseContext();
             using (db)
             {
-                // Czy użytkownik o takim loginie juz istnieje ?              
+                //dodanie uzytkownika do bazy User
                 db.Userss.Add(NewUser);
+                //dodanie do tabeli Rola
+                int ilosc_pozwolen = 0;
+                foreach (var pozwolenie in db.OnlyPozwolenias)
+                {
+                    ilosc_pozwolen++;
+                }
+                string pozwolenie_string = "";
+                for (int i = 0; i < ilosc_pozwolen; i++)
+                {
+                    if (i != ilosc_pozwolen - 1) { pozwolenie_string = pozwolenie_string + '0' + ','; }
+                    else { pozwolenie_string = pozwolenie_string + '0'; }
+                }
+                var newRole_withUser = new Roles { username = loginn, rola = "user", pozwolenia_wszystkie = pozwolenie_string };
+                db.Roless.Add(newRole_withUser);
+
                 db.SaveChanges();
             }
             MessageBox.Show("Pomyślnie zarejestrowano !");

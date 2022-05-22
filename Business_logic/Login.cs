@@ -11,7 +11,7 @@ namespace App.Business_logic
     class Login
     {
         //Metoda odpowiedzalna za sprawdzenie czy są puste miejsca przy logowaniu
-        public bool czy_zostaly_wprowadzone_dane(string a, string b) 
+        public bool czy_zostaly_wprowadzone_dane(string a, string b)
         {
             if ((a == "" || b == ""))
             {
@@ -38,8 +38,8 @@ namespace App.Business_logic
                 }
                 return false;
             }
-            return false;
         }
+
 
     }
 }

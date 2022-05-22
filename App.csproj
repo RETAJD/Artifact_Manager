@@ -61,6 +61,7 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -73,8 +74,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business_logic\Login.cs" />
+    <Compile Include="Business_logic\Manage_users.cs" />
     <Compile Include="Business_logic\Register.cs" />
     <Compile Include="Data\DatabaseContext.cs" />
+    <Compile Include="Data\onlyPozwolenia.cs" />
+    <Compile Include="Data\onlyRoles.cs" />
+    <Compile Include="Data\Roles.cs" />
     <Compile Include="Data\Users.cs" />
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
@@ -85,6 +90,38 @@
     <Compile Include="Migrations\202205191819223_OnlyTwoColumns.cs" />
     <Compile Include="Migrations\202205191819223_OnlyTwoColumns.designer.cs">
       <DependentUpon>202205191819223_OnlyTwoColumns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205201401199_Roles.cs" />
+    <Compile Include="Migrations\202205201401199_Roles.designer.cs">
+      <DependentUpon>202205201401199_Roles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205201436272_Uprawnienia_table.cs" />
+    <Compile Include="Migrations\202205201436272_Uprawnienia_table.designer.cs">
+      <DependentUpon>202205201436272_Uprawnienia_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205211710550_delete_Table.cs" />
+    <Compile Include="Migrations\202205211710550_delete_Table.designer.cs">
+      <DependentUpon>202205211710550_delete_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205211731227_newTable.cs" />
+    <Compile Include="Migrations\202205211731227_newTable.designer.cs">
+      <DependentUpon>202205211731227_newTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205211820538_onlyRoles_table.cs" />
+    <Compile Include="Migrations\202205211820538_onlyRoles_table.designer.cs">
+      <DependentUpon>202205211820538_onlyRoles_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205220836276_TabelaZpozwoleniami.cs" />
+    <Compile Include="Migrations\202205220836276_TabelaZpozwoleniami.designer.cs">
+      <DependentUpon>202205220836276_TabelaZpozwoleniami.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205221040408_zmiana_Roli.cs" />
+    <Compile Include="Migrations\202205221040408_zmiana_Roli.designer.cs">
+      <DependentUpon>202205221040408_zmiana_Roli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205221105279_baza.cs" />
+    <Compile Include="Migrations\202205221105279_baza.designer.cs">
+      <DependentUpon>202205221105279_baza.cs</DependentUpon>
     </Compile>
     <Compile Include="Powitalny.cs">
       <SubType>Form</SubType>
@@ -115,6 +152,12 @@
     <Compile Include="Registration_Form.Designer.cs">
       <DependentUpon>Registration_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Zarzadzanie_uzytkownikami.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Zarzadzanie_uzytkownikami.Designer.cs">
+      <DependentUpon>Zarzadzanie_uzytkownikami.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +166,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205191819223_OnlyTwoColumns.resx">
       <DependentUpon>202205191819223_OnlyTwoColumns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205201401199_Roles.resx">
+      <DependentUpon>202205201401199_Roles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205201436272_Uprawnienia_table.resx">
+      <DependentUpon>202205201436272_Uprawnienia_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205211710550_delete_Table.resx">
+      <DependentUpon>202205211710550_delete_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205211731227_newTable.resx">
+      <DependentUpon>202205211731227_newTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205211820538_onlyRoles_table.resx">
+      <DependentUpon>202205211820538_onlyRoles_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205220836276_TabelaZpozwoleniami.resx">
+      <DependentUpon>202205220836276_TabelaZpozwoleniami.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205221040408_zmiana_Roli.resx">
+      <DependentUpon>202205221040408_zmiana_Roli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205221105279_baza.resx">
+      <DependentUpon>202205221105279_baza.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Powitalny.resx">
       <DependentUpon>Powitalny.cs</DependentUpon>
@@ -144,6 +211,9 @@
     </Compile>
     <EmbeddedResource Include="Registration_Form.resx">
       <DependentUpon>Registration_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zarzadzanie_uzytkownikami.resx">
+      <DependentUpon>Zarzadzanie_uzytkownikami.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -19,8 +19,6 @@ namespace App
             InitializeComponent();
         }
 
-        
-
         private void button1_Click(object sender, EventArgs e)
         {
             string Login_text = textBox1.Text;
@@ -36,7 +34,7 @@ namespace App
                 {
                     zalogowany = true;
                     this.Hide();
-                    MainMenu menu = new MainMenu();
+                    MainMenu menu = new MainMenu(Login_text);
                     menu.ShowDialog();
                 }
                 if(login1.czy_poprawne_dane_logowania(Login_text, Haslo_text) == false)
@@ -44,8 +42,6 @@ namespace App
                     zalogowany = false;
                     MessageBox.Show("Złe dane logowania !");
                 }
-
-
                 if(zalogowany == true) Close();
             }
             

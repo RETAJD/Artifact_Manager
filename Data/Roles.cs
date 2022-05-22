@@ -8,12 +8,15 @@ using System.Threading.Tasks;
 
 namespace App.Data
 {
-    class Users
+    class Roles
     {
-        [Key]
-        public string UserName { get; set; }
-        public string Password { get; set; }
-        //public virtual Roles Roles { get; set; }
+        [Key]  
+        public string username { get; set; }
+        public string rola { get; set; }
 
+        public string pozwolenia_wszystkie { get; set; }
+
+        public List<Users> Users { get; set; }
+        
     }
 }

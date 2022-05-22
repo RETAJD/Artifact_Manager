@@ -25,12 +25,10 @@ namespace App
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //dataGridView1.DataSource = db.Userss.ToList();      // Wyswietlenie bazy Userow
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
 
         private void button1_Click(object sender, EventArgs e)

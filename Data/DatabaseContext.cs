@@ -10,10 +10,13 @@ namespace App.Data
 {
     class DatabaseContext : DbContext
     {
-        public DatabaseContext() : base (@"Data Source=DESKTOP-9K2SBT4\SQLEXPRESS;Initial Catalog=DATABASE_APP;User ID=DESKTOP-9K2SBT4\admin;Password=;Integrated Security=True")
+        public DatabaseContext() : base (@"Data Source=DESKTOP-9K2SBT4\SQLEXPRESS;Initial Catalog=DATABASE_APP;User ID=DESKTOP-9K2SBT4\admin;Password=;Integrated Security=True;MultipleActiveResultSets=True")
         {
         }
 
         public virtual DbSet<Users> Userss { get; set; }
+        public virtual DbSet<Roles> Roless { get; set; }
+        public virtual DbSet<onlyRoles> onlyRoless { get; set; }
+        public virtual DbSet<onlyPozwolenia> OnlyPozwolenias { get; set; }
     }
 }
