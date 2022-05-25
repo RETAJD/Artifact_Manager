@@ -46,5 +46,13 @@ namespace App
             registration_form.ShowDialog();
             this.Close();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            unlogged_Artifact_browser art_men = new unlogged_Artifact_browser();
+            this.Hide();
+            art_men.ShowDialog();
+            this.Close();
+        }
     }
 }

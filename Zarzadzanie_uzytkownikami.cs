@@ -39,7 +39,7 @@ namespace App
         private void Zarzadzanie_uzytkownikami_Load(object sender, EventArgs e)
         {
             string nazwa_uzytkownika = curr;
-            label1.Text= "Zarzadzanie uzytkownikami, witaj: " + curr;
+            label1.Text= "Zarzadzanie uzytkownikami, witaj: " + nazwa_uzytkownika;
 
             dataGridView1.DataSource = db.Userss.ToList();      // Wyswietlenie bazy Userow
             dataGridView2.DataSource = db.Roless.ToList();       //wyswietlenie  bazy Roles
@@ -191,6 +191,10 @@ namespace App
                 {
                     comboBox4.Items.Add(c.pozwolenie_pojedyncze);
                 }
+
+                // odswiezenie tabeli User
+                dataGridView1.DataSource = db.Userss.ToList();
+
             }
 
         }
@@ -259,6 +263,21 @@ namespace App
             Manage_users manage_Users = new Manage_users();
             if (comboBox3.Text != "") manage_Users.usun_role(comboBox3.Text);
             else { MessageBox.Show("Wybierz rolę !"); }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Register rg = new Register();
+            string nazwa_uzytkownika = curr;
+            if(textBox6.Text != "" && textBox5.Text != "") rg.aktualizacja_hasla(textBox6.Text, textBox5.Text);
+            else
+            {
+                MessageBox.Show("Wprowadź dane !");
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }

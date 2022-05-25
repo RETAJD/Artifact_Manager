@@ -18,5 +18,10 @@ namespace App.Data
         public virtual DbSet<Roles> Roless { get; set; }
         public virtual DbSet<onlyRoles> onlyRoless { get; set; }
         public virtual DbSet<onlyPozwolenia> OnlyPozwolenias { get; set; }
+        public virtual DbSet<Category> Categoryss { get; set; }
+        public virtual DbSet<Elements> Elementsss { get; set; }
+        public virtual DbSet<elements_values> Elementsvaluess { get; set; }
+
+
     }
 }

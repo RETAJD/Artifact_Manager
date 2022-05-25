@@ -73,14 +73,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add_new_category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_new_category.Designer.cs">
+      <DependentUpon>Add_new_category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Artifact_manage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Artifact_manage.Designer.cs">
+      <DependentUpon>Artifact_manage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business_logic\Add_Categoryy.cs" />
+    <Compile Include="Business_logic\Deleting_rows.cs" />
+    <Compile Include="Business_logic\Edit_categoryy.cs" />
     <Compile Include="Business_logic\Login.cs" />
     <Compile Include="Business_logic\Manage_users.cs" />
     <Compile Include="Business_logic\Register.cs" />
+    <Compile Include="Data\Category.cs" />
     <Compile Include="Data\DatabaseContext.cs" />
+    <Compile Include="Data\Elements.cs" />
+    <Compile Include="Data\elements_values.cs" />
     <Compile Include="Data\onlyPozwolenia.cs" />
     <Compile Include="Data\onlyRoles.cs" />
     <Compile Include="Data\Roles.cs" />
     <Compile Include="Data\Users.cs" />
+    <Compile Include="Delete_category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_category.Designer.cs">
+      <DependentUpon>Delete_category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_category.Designer.cs">
+      <DependentUpon>Edit_category.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +153,22 @@
     <Compile Include="Migrations\202205221105279_baza.designer.cs">
       <DependentUpon>202205221105279_baza.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202205241418189_migr.cs" />
+    <Compile Include="Migrations\202205241418189_migr.designer.cs">
+      <DependentUpon>202205241418189_migr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205241436373_value_of_element.cs" />
+    <Compile Include="Migrations\202205241436373_value_of_element.designer.cs">
+      <DependentUpon>202205241436373_value_of_element.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205242305421_addID.cs" />
+    <Compile Include="Migrations\202205242305421_addID.designer.cs">
+      <DependentUpon>202205242305421_addID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205251511020_kol_col.cs" />
+    <Compile Include="Migrations\202205251511020_kol_col.designer.cs">
+      <DependentUpon>202205251511020_kol_col.cs</DependentUpon>
+    </Compile>
     <Compile Include="Powitalny.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,12 +198,36 @@
     <Compile Include="Registration_Form.Designer.cs">
       <DependentUpon>Registration_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="top5andNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="top5andNew.Designer.cs">
+      <DependentUpon>top5andNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="unlogged_Artifact_browser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="unlogged_Artifact_browser.Designer.cs">
+      <DependentUpon>unlogged_Artifact_browser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Zarzadzanie_uzytkownikami.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Zarzadzanie_uzytkownikami.Designer.cs">
       <DependentUpon>Zarzadzanie_uzytkownikami.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Add_new_category.resx">
+      <DependentUpon>Add_new_category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Artifact_manage.resx">
+      <DependentUpon>Artifact_manage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_category.resx">
+      <DependentUpon>Delete_category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_category.resx">
+      <DependentUpon>Edit_category.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +261,18 @@
     <EmbeddedResource Include="Migrations\202205221105279_baza.resx">
       <DependentUpon>202205221105279_baza.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205241418189_migr.resx">
+      <DependentUpon>202205241418189_migr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205241436373_value_of_element.resx">
+      <DependentUpon>202205241436373_value_of_element.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205242305421_addID.resx">
+      <DependentUpon>202205242305421_addID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205251511020_kol_col.resx">
+      <DependentUpon>202205251511020_kol_col.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Powitalny.resx">
       <DependentUpon>Powitalny.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,6 +293,12 @@
     </Compile>
     <EmbeddedResource Include="Registration_Form.resx">
       <DependentUpon>Registration_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="top5andNew.resx">
+      <DependentUpon>top5andNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="unlogged_Artifact_browser.resx">
+      <DependentUpon>unlogged_Artifact_browser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Zarzadzanie_uzytkownikami.resx">
       <DependentUpon>Zarzadzanie_uzytkownikami.cs</DependentUpon>

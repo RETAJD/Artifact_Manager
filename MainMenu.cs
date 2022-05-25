@@ -45,10 +45,34 @@ namespace App
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
             string nazwauzytkownika = curr;  // przekazanie uzytkownika zalogowanego do zarzadzania uzytkownikami
-            Zarzadzanie_uzytkownikami zarz = new Zarzadzanie_uzytkownikami(nazwauzytkownika);
-            zarz.ShowDialog();
+            Manage_users MU = new Manage_users();
+
+            if (MU.czy_ma_odpowienia_role(nazwauzytkownika))
+            {
+                this.Hide();
+                Zarzadzanie_uzytkownikami zarz = new Zarzadzanie_uzytkownikami(nazwauzytkownika);
+                zarz.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Nie masz odpowiedniej roli do Zarządzania Uzytkownikami !");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string nazwauzytkownika = curr;
+            Artifact_manage Am = new Artifact_manage(nazwauzytkownika);
+            this.Hide();
+            Am.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string nazwa_uzytkownika = curr;
+            top5andNew t5n = new top5andNew(nazwa_uzytkownika);
+            t5n.ShowDialog();
         }
     }
 }

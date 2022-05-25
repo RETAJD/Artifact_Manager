@@ -13,41 +13,47 @@ namespace App.Business_logic
 {
     class Manage_users
     {
+        public bool czy_ma_odpowienia_role(string login)
+        {
+            DatabaseContext db = new DatabaseContext();
+            using (db)
+            {
+                foreach(var c in db.Roless)
+                {
+                    if(c.username == login && c.rola == "admin")
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            }  
+        }
+
+
         public void usun_role(string rola_)
         {
-
             DatabaseContext db = new DatabaseContext();
 
             using (db)
             {
-
                 //usuniecie z onlyRoless
                 db.onlyRoless.RemoveRange(db.onlyRoless.Where(x => x.Rola_pojedyncza == rola_));
 
                 //usuniecie z Users
-                
-                // TODO USUNIECIE  Z TABELI USERS
-
+                foreach(var c in db.Roless)
+                {
+                      if(c.rola == rola_)
+                      {
+                            db.Userss.RemoveRange(db.Userss.Where(x => x.UserName == c.username));
+                      }
+                }
+               
                 //usuniecie z Roles
                 db.Roless.RemoveRange(db.Roless.Where(x => x.rola == rola_));
                 
-
-
-
-
                 MessageBox.Show("Usunieto rolę z bazy !");
                 db.SaveChanges();
             }
-
-
-
-
-
-
-
-
-
-
         }
         public bool czy_pozwolenie_istnieje(string pozwolenie)
         {

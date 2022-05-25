@@ -39,3 +39,13 @@ C:\Users\admin\source\repos\App\obj\Debug\App.Migrations.onlyRoles_table.resourc
 C:\Users\admin\source\repos\App\obj\Debug\App.Migrations.TabelaZpozwoleniami.resources
 C:\Users\admin\source\repos\App\obj\Debug\App.Migrations.zmiana_Roli.resources
 C:\Users\admin\source\repos\App\obj\Debug\App.Migrations.baza.resources
+C:\Users\admin\source\repos\App\obj\Debug\App.unlogged_Artifact_browser.resources
+C:\Users\admin\source\repos\App\obj\Debug\App.Migrations.migr.resources
+C:\Users\admin\source\repos\App\obj\Debug\App.Migrations.value_of_element.resources
+C:\Users\admin\source\repos\App\obj\Debug\App.Artifact_manage.resources
+C:\Users\admin\source\repos\App\obj\Debug\App.Add_new_category.resources
+C:\Users\admin\source\repos\App\obj\Debug\App.Edit_category.resources
+C:\Users\admin\source\repos\App\obj\Debug\App.Delete_category.resources
+C:\Users\admin\source\repos\App\obj\Debug\App.Migrations.addID.resources
+C:\Users\admin\source\repos\App\obj\Debug\App.top5andNew.resources
+C:\Users\admin\source\repos\App\obj\Debug\App.Migrations.kol_col.resources

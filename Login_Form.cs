@@ -44,7 +44,6 @@ namespace App
                 }
                 if(zalogowany == true) Close();
             }
-            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -75,6 +74,13 @@ namespace App
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Powitalny menu = new Powitalny();
+            menu.ShowDialog();
         }
     }
 }

@@ -37,7 +37,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(101, 154);
+            this.button1.Location = new System.Drawing.Point(101, 135);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 48);
             this.button1.TabIndex = 1;
@@ -48,7 +48,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(101, 230);
+            this.button2.Location = new System.Drawing.Point(101, 208);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(129, 48);
             this.button2.TabIndex = 2;
@@ -69,12 +69,13 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button3.Location = new System.Drawing.Point(101, 299);
+            this.button3.Location = new System.Drawing.Point(101, 278);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(129, 48);
             this.button3.TabIndex = 4;
             this.button3.Text = "Przeglądaj artefakty";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Powitalny
             // 

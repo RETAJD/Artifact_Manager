@@ -11,6 +11,27 @@ namespace App.Business_logic
 {
     class Register
     {
+        public void aktualizacja_hasla(string login_, string haslo)
+        {
+            string passwordHash = szyfrowanieHasla(haslo);
+
+            DatabaseContext db = new DatabaseContext();
+            using (db)
+            {
+                foreach(var c in db.Userss)
+                {
+                    if(c.UserName == login_)
+                    {
+                        c.Password = passwordHash;
+                        break;
+                    }
+                }
+                MessageBox.Show("Ustawiono nowe hasło !");
+                db.SaveChanges();
+            }
+        }
+
+
         // Metoda odpowiedzalna za sprawdzenie bledow przy logowaniu
         public bool czy_zostaly_wprowadzone_dane(string loginn, string hasloo)
         {
